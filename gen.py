@@ -41,5 +41,6 @@ def get_new_pw(length):
 		pw.append(dw_dict.get(rand, ""))
 	return ''.join(pw)
 
-for i in range(options.num_to_gen):
-	print(get_new_pw(options.length))
+if __name__ == '__main__':
+	for i in range(options.num_to_gen):
+		print(get_new_pw(options.length))
