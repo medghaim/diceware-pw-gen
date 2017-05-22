@@ -25,13 +25,10 @@ def load_dw_dict():
 options, args = get_args()
 dw_dict = load_dw_dict()
 
-def rolls(n, x, y):
-	return [str(randint(x,y)) for i in range(n)]
-
 def get_new_pw(length):
 	pw = []
 	for i in range(length):
-		rand = ''.join(rolls(5, 1, 6)) # dw takes 5 random ints, from 1-6
+		rand = ''.join([str(randint(1,6)) for i in range(5)]) # dw takes 5 random ints, from 1-6
 		pw.append(dw_dict.get(rand, ""))
 	return ''.join(pw)
 
